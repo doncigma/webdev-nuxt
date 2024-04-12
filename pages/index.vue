@@ -1,6 +1,6 @@
 <template>
     <main class="flex flex-row gap-4 justify-between">
-        <HomePageBucket color="indigo" :title="Inidgo Bucket"/>
+        <HomePageBucket color="indigo" :title="Indigo Bucket"/>
         <HomePageBucket color="amber" title="Amber Bucket"></HomePageBucket>
         <HomePageBucket color="sky" title="Sky Bucket" v-if="blogCount >="></HomePageBucket>
     </main>
@@ -13,6 +13,7 @@
 </template>
 
 <script setup>
+    definePageMeta({colorMode: 'light'})
     const blogCount = ref(5);
 
     const changeCount = function(quantity, operation) {
